@@ -1,6 +1,6 @@
-# LocalColabFold
+# CloudColabFold
 
-[ColabFold / AlphaFold2_advanced](https://colab.research.google.com/github/sokrypton/ColabFold/blob/main/beta/AlphaFold2_advanced.ipynb) on your local PC (or macOS)
+[ColabFold / AlphaFold2_advanced](https://colab.research.google.com/github/sokrypton/ColabFold/blob/main/beta/AlphaFold2_advanced.ipynb) on your local PC (or macOS) via [LocalColabFold](https://github.com/YoshitakaMo/localcolabfold)
 
 ## Installation
 

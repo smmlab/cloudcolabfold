@@ -1,9 +1,5 @@
 #!/bin/sh
 
-# check whether `wget` and `curl` are installed
-type wget || { echo "wget command is not installed. Please install it at first using apt or yum." ; exit 1 ; }
-type curl || { echo "curl command is not installed. Please install it at first using apt or yum. " ; exit 1 ; }
-
 GIT_REPO="https://github.com/deepmind/alphafold"
 SOURCE_URL="https://storage.googleapis.com/alphafold/alphafold_params_2021-07-14.tar"
 CURRENTPATH=`pwd`
@@ -49,17 +45,6 @@ echo "Downloading stereo_chemical_props.txt..."
 wget -q https://git.scicore.unibas.ch/schwede/openstructure/-/raw/7102c63615b64735c4941278d92b554ec94415f8/modules/mol/alg/src/stereo_chemical_props.txt
 mkdir -p ${COLABFOLDDIR}/alphafold/common
 mv stereo_chemical_props.txt ${COLABFOLDDIR}/alphafold/common
-
-# echo "installing HH-suite 3.3.0..."
-# mkdir -p ${MSATOOLS}
-# git clone --branch v3.3.0 https://github.com/soedinglab/hh-suite.git hh-suite-3.3.0
-# (cd hh-suite-3.3.0 ; mkdir build ; cd build ; cmake -DCMAKE_INSTALL_PREFIX=${MSATOOLS}/hh-suite .. ; make -j4 ; make install)
-# rm -rf hh-suite-3.3.0
-
-# echo "installing HMMER 3.3.2..."
-# wget http://eddylab.org/software/hmmer/hmmer-3.3.2.tar.gz
-# (tar xzvf hmmer-3.3.2.tar.gz ; cd hmmer-3.3.2 ; ./configure --prefix=${MSATOOLS}/hmmer ; make -j4 ; make install)
-# rm -rf hmmer-3.3.2.tar.gz hmmer-3.3.2
 
 # Install Miniconda3 for Linux
 echo "Installing Miniconda3 for Linux..."
